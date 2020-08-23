@@ -8,7 +8,7 @@ const HeaderComponent = () => {
     <Box w="100%">
       <Flex flexDirection="column" align="center">
         <Stack isInline align="center">
-          <Avatar></Avatar>
+          <Avatar name={data.title} src={data.logo}></Avatar>
           <Text fontSize="4xl">{data.title}</Text>
         </Stack>
       </Flex>
