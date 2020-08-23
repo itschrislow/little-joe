@@ -4,7 +4,7 @@ const MenuItemComponent = props => {
   const { name, price, img, desc } = props;
 
   return (
-    <Box maxW="sm" borderWidth="1px" rounded="lg" overflow="hidden">
+    <Box maxW="sm" overflow="hidden" rounded="lg" boxShadow="lg">
       <Image size="sm" height="300px" objectFit="cover" src={img} alt={name} />
       <Box p="10px">
         <Text style={{ float: "right" }}>RM {price}</Text>
