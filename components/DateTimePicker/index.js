@@ -3,7 +3,7 @@ import DateTimePicker from 'react-datetime-picker/dist/entry.nostyle';
 import styles from "./styles";
 
 const DateTimeComponent = props => {
-  const [datetime, setDatetime] = useState(new Date());
+  const [datetime, setDatetime] = useState(null);
 
   const handleChange = (newDatetime) => {
     setDatetime(newDatetime)
