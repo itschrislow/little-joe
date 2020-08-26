@@ -1,14 +1,19 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import HeaderComponent from "../components/Header";
-import { Stack, Flex, Box, Divider, Text, Avatar, Link } from "@chakra-ui/core";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
+import { Spinner, Flex } from "@chakra-ui/core";
 
 const Home = () => {
+  const router = useRouter();
+
+  useEffect(() => {
+    router.push("/menu")
+  }, []);
+
   return (
-    <>
-      <p>home</p>
-    </>
-  )
+    <Flex h="80vh" align="center" justify="center">
+      <Spinner />
+    </Flex>
+  );
 }
 
 export default Home;
