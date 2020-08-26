@@ -7,9 +7,6 @@ import styles from "./styles";
 
 const HeaderComponent = () => {
   const router = useRouter();
-  useEffect(() => {
-    console.log(router.pathname)
-  }, [router.pathname]);
 
   return (
     <Box w="100%">
