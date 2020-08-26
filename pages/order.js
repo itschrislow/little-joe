@@ -50,7 +50,6 @@ const Order = () => {
     const time = datetime_str.slice(16, 21);
     let total = 0;
     let item_str = "";
-    console.log(day, date_str, time)
     forEach(order, ({ name, checked, quantity, price }) => {
       if (checked) {
         total += quantity * price;
@@ -62,8 +61,6 @@ const Order = () => {
     const delivery = `\nDelivery Address:\n${address}\n\nDelivery Date:\n${date_str} (${day})\n\nDelivery Time:\n${time}\n\n`;
     const order_total = `Total:\nRM ${total.toFixed(2)}`;
     const order_msg = intro + item_str + delivery + order_total;
-
-    console.log(`https://wa.me/send?phone=${phone_number}&text=${escape(order_msg)}`);
 
     document.location.href = `https://wa.me/send?phone=${phone_number}&text=${escape(order_msg)}`;
   }
@@ -112,7 +109,7 @@ const Order = () => {
         <Input name="remarks" ref={register} />
       </FormControl>
 
-      <Button isFullWidth type="submit" mt="1rem" style={{ position: "sticky", bottom: "24px" }}>
+      <Button isFullWidth type="submit" mt="1rem" style={{ position: "sticky", bottom: "48px" }}>
         Submit Order
       </Button>
     </form>
