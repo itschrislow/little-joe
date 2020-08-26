@@ -109,7 +109,7 @@ const Order = () => {
         <Input name="remarks" ref={register} />
       </FormControl>
 
-      <Button isFullWidth type="submit" mt="1rem" style={{ position: "sticky", bottom: "24px" }}>
+      <Button isFullWidth type="submit" mt="1rem" style={{ position: "sticky", bottom: "48px" }}>
         Submit Order
       </Button>
     </form>
