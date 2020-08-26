@@ -80,7 +80,7 @@ const Order = () => {
         <Input name="contact" ref={register} />
       </FormControl>
 
-      <FormControl>
+      <FormControl isRequired>
         <FormLabel>Items</FormLabel>
       </FormControl>
       <CheckboxGroup>
