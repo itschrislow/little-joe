@@ -65,7 +65,7 @@ const Order = () => {
 
     console.log(`https://wa.me/send?phone=${phone_number}&text=${escape(order_msg)}`);
 
-    document.location.href = `https://wa.me/send?phone=${phone_number}&text=${escape(order_msg)}`;
+    document.location.href = `https://api.whatsapp.com/send?phone=${phone_number}&text=${escape(order_msg)}`;
   }
 
   return (
