@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import {
   Box,
+  Text,
   Checkbox,
   SimpleGrid,
   NumberInput,
@@ -29,7 +30,10 @@ const OrderItemComponent = props => {
   return (
     <SimpleGrid column={2} minChildWidth="80px">
       <Box width="250px">
-        <Checkbox value={item_name} h="40px" onChange={handleCheckboxChange}>{item_name} - RM {item_price}</Checkbox>
+        <Checkbox value={item_name} h="50px" onChange={handleCheckboxChange}>
+          <Text>{item_name}</Text>
+          <Text>RM {item_price.toFixed(2)}</Text>
+        </Checkbox>
       </Box>
       <Box>
         {isChecked && (
