@@ -1,10 +1,17 @@
 import data from "../data/info";
-import { Image } from "@chakra-ui/core";
+import { Box, Image } from "@chakra-ui/core";
 
 const About = () => {
   return (
     <>
-      <Image src="/about.jpeg" pt="0.5rem" pb="0.75rem" />
+      <Box
+        overflow="hidden"
+        rounded="lg"
+        mt="0.5rem"
+        mb="0.75rem"
+      >
+        <Image src="/about.jpeg" objectFit="cover" />
+      </Box>
       <p>{data.about}</p>
     </>
   )
