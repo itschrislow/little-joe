@@ -7,7 +7,7 @@ const MenuItemComponent = props => {
     <Box maxW="sm" overflow="hidden" rounded="lg" boxShadow="lg">
       <Image size="sm" height="300px" objectFit="cover" src={img} alt={name} />
       <Box p="10px">
-        <Text style={{ float: "right" }}>RM {price}</Text>
+        <Text style={{ float: "right" }}>RM {price.toFixed(2)}</Text>
         <Text>{name}</Text>
         <Text>{desc}</Text>
       </Box>
