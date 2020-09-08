@@ -12,11 +12,12 @@ const MenuItemComponent = props => {
       overflow="hidden"
       rounded="lg"
       boxShadow="lg"
+      style={{ cursor: "pointer" }}
     >
       <Image size="sm" height="300px" objectFit="cover" src={img} alt={name} />
       <Box p="10px">
-        <Text style={{ float: "right" }}>RM {price.toFixed(2)}</Text>
-        <Text>{name}</Text>
+        <Text fontSize="xl" fontFamily="Kaushan Script" style={{ float: "right" }}>RM {price.toFixed(2)}</Text>
+        <Text fontSize="xl" fontFamily="Kaushan Script">{name}</Text>
         <Text>{desc}</Text>
       </Box>
     </Box>
