@@ -1,8 +1,17 @@
 import React from "react";
 import Head from "next/head";
-import { Box } from "@chakra-ui/core";
+import styled from '@emotion/styled';
+import { Box, Flex } from "@chakra-ui/core";
 import data from "../../data/info"
 import Header from "../Header";
+
+const StickyNav = styled(Flex)`
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  backdrop-filter: saturate(180%) blur(20px);
+  transition: background-color 0.1 ease-in-out;
+`;
 
 const LayoutComponent = props => {
   return (
@@ -10,8 +19,21 @@ const LayoutComponent = props => {
       <Head>
         <title>{data.title}</title>
       </Head>
-      <Box h="100vh" p="1.5rem">
+      <StickyNav
+        flexDirection="row"
+        justifyContent="space-between"
+        alignItems="center"
+        maxWidth="900px"
+        width="100%"
+        as="nav"
+        p={8}
+        pb={0}
+        mt={0}
+        mx="auto"
+      >
         <Header />
+      </StickyNav>
+      <Box h="100vh" p="1.5rem" pt={0}>
         {props.children}
       </Box>
     </div>
