@@ -3,7 +3,7 @@ import { theme } from "@chakra-ui/core";
 const customTheme = {
   ...theme,
   fonts: {
-    body: 'Open Sans',
+    body: 'Open Sans, Kaushan Script',
   }
 };
 
