@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import NextLink from 'next/link';
 import data from "../../data/info";
 import { useRouter } from "next/router";
@@ -14,7 +13,7 @@ const HeaderComponent = () => {
         <NextLink href="/menu" passHref>
           <Stack isInline align="center" style={{ cursor: "pointer" }}>
             <Avatar name={data.title} src={data.logo}></Avatar>
-            <Text fontSize="4xl">{data.title}</Text>
+            <Text fontSize="5xl" fontFamily="Kaushan Script">{data.title}</Text>
           </Stack>
         </NextLink>
       </Flex>

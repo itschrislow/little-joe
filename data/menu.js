@@ -28,7 +28,7 @@ export default {
       name: "Chocolate Chip Cookies ",
       price: 10,
       img: "cookie.jpeg",
-      desc: "Additional RM3 for salted cream topping.",
+      desc: "",
     },
     {
       name: "Red Velvet Cupcake",
