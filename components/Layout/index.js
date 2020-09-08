@@ -15,7 +15,7 @@ const StickyNav = styled(Flex)`
 
 const LayoutComponent = props => {
   return (
-    <div className="layout-wrapper">
+    <Box className="layout-wrapper" alignItems="center">
       <Head>
         <title>{data.title}</title>
       </Head>
@@ -33,10 +33,10 @@ const LayoutComponent = props => {
       >
         <Header />
       </StickyNav>
-      <Box h="100vh" p="1.5rem" pt={0}>
+      <Box maxWidth="900px" h="100vh" p="1.5rem" pt={0} m="auto">
         {props.children}
       </Box>
-    </div>
+    </Box>
   );
 };
 
