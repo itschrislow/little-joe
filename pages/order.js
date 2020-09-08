@@ -3,7 +3,7 @@ import {
   FormControl,
   FormLabel,
   Input,
-  CheckboxGroup,
+  CheckboxGroup
 } from "@chakra-ui/core";
 import map from "lodash/map";
 import { useState } from "react";
@@ -62,7 +62,7 @@ const Order = () => {
     const order_total = `Total:\nRM ${total.toFixed(2)}`;
     const order_msg = intro + item_str + delivery + order_total;
 
-    document.location.href = `https://wa.me/send?phone=${phone_number}&text=${escape(order_msg)}`;
+    window.location.href = `https://api.whatsapp.com/send?phone=${phone_number}&text=${escape(order_msg)}`;
   }
 
   return (
@@ -109,10 +109,10 @@ const Order = () => {
         <Input name="remarks" ref={register} />
       </FormControl>
 
-      <Button isFullWidth type="submit" mt="1rem" style={{ position: "sticky", bottom: "48px" }}>
+      <Button isFullWidth type="submit" mt="1rem" mb="1.5rem">
         Submit Order
-      </Button>
-    </form>
+        </Button>
+    </form >
   )
 }
 
